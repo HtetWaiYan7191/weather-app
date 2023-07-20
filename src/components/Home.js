@@ -1,9 +1,16 @@
 import React from 'react';
+import citiesData from '../redux/citiesData';
+import CityCard from './CityCard';
+import '../styles/Home.css';
 
-const Home = () => (
-  <div>
-    <h1 className="text-red-500">This is Home</h1>
-  </div>
-);
+function Home () {
 
+
+
+  return (
+    <div className='city-container grid grid-cols-3'>
+        {citiesData.map((city) => <CityCard key={city.name} city={city}/>)}
+    </div>
+  )
+}
 export default Home;
