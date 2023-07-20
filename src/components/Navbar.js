@@ -3,8 +3,6 @@ import { NavLink, useNavigate, Link } from 'react-router-dom';
 import { TiWeatherPartlySunny } from 'react-icons/ti';
 import '../styles/Navbar.css';
 
-import { fetchSearchCity } from '../redux/city/citySlice';
-
 const Navbar = () => {
   const [inputSearch, setInputSearch] = useState('');
   const navigate = useNavigate();
@@ -20,7 +18,7 @@ const Navbar = () => {
         <TiWeatherPartlySunny className="text-7xl text-white" />
       </div>
       <form onSubmit={handleSubmit}>
-        <input placeholder="Search City" value={inputSearch} onChange={(e) => setInputSearch(e.target.value)} className=" outline-none border-b-2 border-b-white bg-inherit placeholder:text-white" />
+        <input placeholder="Search City" value={inputSearch} onChange={(e) => setInputSearch(e.target.value)} className=" outline-none border-b-2 text-white border-b-white bg-inherit placeholder:text-white" />
       </form>
       <ul className="flex">
         <li className="me-3"><NavLink to="/">Home</NavLink></li>

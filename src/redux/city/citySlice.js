@@ -26,6 +26,7 @@ const citySlice = createSlice({
     builder.addCase(fetchSearchCity.fulfilled, (state, action) => {
       state.loading = false;
       state.value = action.payload;
+      console.log(state.value);
     });
     builder.addCase(fetchSearchCity.rejected, (state, action) => {
       state.loading = false;

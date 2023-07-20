@@ -12,7 +12,7 @@ const detailSlice = createSlice({
   initialState: null,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchDetailAPI.fulfilled, (state, action) => action.payload)
+    builder.addCase(fetchDetailAPI.fulfilled, (state, action) => action.payload);
   },
 });
 
