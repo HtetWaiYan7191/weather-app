@@ -3,14 +3,11 @@ import citiesData from '../redux/citiesData';
 import CityCard from './CityCard';
 import '../styles/Home.css';
 
-function Home () {
-
-
-
+function Home() {
   return (
-    <div className='city-container grid grid-cols-3'>
-        {citiesData.map((city) => <CityCard key={city.name} city={city}/>)}
+    <div className="city-container grid grid-cols-5">
+      {citiesData.map((city) => <CityCard key={city.name} city={city} />)}
     </div>
-  )
+  );
 }
 export default Home;
