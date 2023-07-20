@@ -4,4 +4,9 @@ nav {
 
 .active {
     color: white;
+    border-bottom: 1px solid whitesmoke;
+}
+
+nav ul li {
+    font-family: 'Roboto Slab', serif;
 }
