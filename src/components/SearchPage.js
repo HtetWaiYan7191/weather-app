@@ -3,31 +3,45 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { fetchSearchCity } from '../redux/city/citySlice';
 import cloudImage from '../assets/cloudImage.png';
+import { Link } from 'react-router-dom';
+import {AiOutlineLoading3Quarters} from 'react-icons/ai'
+
 
 const SearchPage = () => {
   const { name } = useParams();
   const dispatch = useDispatch();
   const city = useSelector((state) => state.city.value);
 
-  useEffect(() => {
-    dispatch(fetchSearchCity(name));
-  }, [dispatch]);
 
+
+  useEffect(() => {
+      dispatch(fetchSearchCity(name));
+  }, [dispatch]);
+if(city.length === 0) {
   return (
-    <div className="city-container grid grid-cols-4">
-      <div className="city-card flex justify-around border  border-1 items-center">
+    <div className="loading"><AiOutlineLoading3Quarters className='loading-icon  text-white text-4xl'/></div>
+  )
+}
+  return (
+    <div className='search-page w-[100%] h-[100vh] bg-sky-400 flex justify-center align-middle'>
+      <div className="city-container w-[50%] my-10 ">
+      <Link to={{ pathname: `/details/${name}/${city[0].lat}/${city[0].lon}` }} className='link-wrapper'>
+      <div className="city-card  flex justify-between  bg-[#2f85c7ef] px-10 py-8 cursor-pointer border  border-1 items-center text-center">
         <figure>
           <img src={cloudImage} width="100px" />
         </figure>
         {city.length > 0 && (
         <ul className="weather-info flex flex-col">
-          <li>{city[0].name}</li>
-          <li>{city[0].lat}</li>
-          <li>{city[0].lon}</li>
+          <li className=' text-black'>{city[0].name}</li>
+          <li className=' text-black'>Lat: {city[0].lat}</li>
+          <li className=' text-black'>Lon: {city[0].lon}</li>
         </ul>
         )}
       </div>
+      </Link>
     </div>
+    </div>
+
   );
 };
 
