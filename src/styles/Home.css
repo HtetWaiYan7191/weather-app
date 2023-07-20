@@ -1,0 +1,8 @@
+
+.city-container .city-card:nth-child(odd) {
+    background-color: rgb(119, 119, 248);
+}
+
+.city-container .city-card:nth-child(even) {
+    background-color: blue;
+}
