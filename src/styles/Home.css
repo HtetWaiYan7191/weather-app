@@ -1,4 +1,4 @@
-.city-container .link-wrapper .city-card {
+/* .city-container .link-wrapper .city-card {
     padding: 25px 15px;
 }
 .city-container .link-wrapper:nth-child(odd) {
@@ -12,4 +12,28 @@
 .weather-info li {
     font-family: 'Roboto Slab', serif;
     color: whitesmoke;
+} */
+
+@media screen and (min-width: 378px){
+    .city-container .link-wrapper .city-card {
+        padding: 30px 10px;
+    }
+    .city-container .link-wrapper:nth-child(odd) {
+        background-color:#468bd0e3;
+    }
+    
+    .city-container .link-wrapper:nth-child(even) {
+        background-color:#2f85c7ef;
+    }
+    
+    .weather-info li {
+        font-family: 'Roboto Slab', serif;
+        color: whitesmoke;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .city-container .link-wrapper .city-card {
+        padding: 30px 15px;
+    }
 }
