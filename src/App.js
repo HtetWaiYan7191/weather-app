@@ -13,7 +13,6 @@ const App = () => (
     <Route path="/search/:name" element={<SearchPage />} />
     <Route path="*" element={<ErrorPage />} />
   </Routes>
-
 );
 
 export default App;

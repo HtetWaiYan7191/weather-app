@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router-dom';
 import '../styles/Details.css';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';

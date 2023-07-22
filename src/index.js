@@ -1,19 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { createRoot } from 'react-dom/client'; // Correct import statement
 import App from './App';
 import './index.css';
 import Navbar from './components/Navbar';
 import store from './redux/store';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Provider store={store}>
       <Navbar />
       <App />
     </Provider>
-
   </BrowserRouter>,
 );
 
