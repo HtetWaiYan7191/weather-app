@@ -8,7 +8,7 @@ function CityCard({ city }) {
     <Link to={{ pathname: `/details/${city.name}/${city.lat}/${city.lon}` }} className="link-wrapper">
       <div className="city-card flex justify-between items-center cursor-pointer">
         <figure>
-          <img src={cloudImage} className="md: w-[100px]  w-[70px]" alt="cloud" />
+          <img src={cloudImage} className="md:w-[100px]  w-[70px]" alt="cloud" />
         </figure>
         <ul className="weather-info flex flex-col">
           <li>{city.name}</li>
