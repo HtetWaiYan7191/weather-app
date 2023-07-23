@@ -5,6 +5,9 @@ import '../styles/Details.css';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { fetchDetailAPI } from '../redux/detail/detailSlice';
+import cloudImageCover from '../assets/cloudImageCover.png';
+
+
 
 const Details = () => {
   const { lat, lon } = useParams();
@@ -30,6 +33,9 @@ const Details = () => {
   };
   return (
     <div className="detail-container bg-sky-500 py-10">
+      {/* <div className='image-container w-[500px]'>
+        <img src={cloudImageCover} alt='cloud-cover' className='cloud-image'/>
+      </div> */}
       <IoMdArrowRoundBack onClick={handleClick} className=" text-4xl font-semibold text-white ms-10 border cursor-pointer border-white" />
       <header className="header-container w-[50%] mx-auto text-center pt-[10rem] pb-[5rem] mb-2 ">
         <h2 className=" text-4xl font-semibold text-white mb-2">{detailInfo.name}</h2>
@@ -51,8 +57,8 @@ const Details = () => {
         </span>
       </header>
 
-      <div className="grid grid-cols-2 gap-5 w-[80%] mx-auto ">
-        <div className="detail-info-card">
+      <div className="flex flex-wrap md:grid md:grid-cols-2 gap-5 md:w-[80%] md:mx-auto w-[100%] px-10 md:px-0 ">
+        <div className="detail-info-card flex-1">
           <h2 className="">COORDINATES</h2>
           <div className="flex justify-between item">
             <span>Latitude</span>
@@ -64,7 +70,7 @@ const Details = () => {
           </div>
         </div>
 
-        <div className="detail-info-card">
+        <div className="detail-info-card flex-1">
           <h2>WEATHER</h2>
           <div className="flex justify-between item">
             <span>Main</span>
@@ -76,7 +82,7 @@ const Details = () => {
           </div>
         </div>
 
-        <div className="detail-info-card">
+        <div className="detail-info-card flex-1">
           <h2>BASESTATION</h2>
           <div className="flex justify-between item">
             <span>Temperature</span>
@@ -88,7 +94,7 @@ const Details = () => {
           </div>
         </div>
 
-        <div className="detail-info-card">
+        <div className="detail-info-card flex-1">
           <h2>Pressure</h2>
           <div className="flex justify-between item">
             <span>Sea Level</span>
@@ -100,7 +106,7 @@ const Details = () => {
           </div>
         </div>
 
-        <div className="detail-info-card col-span-2">
+        <div className="detail-info-card flex-1 col-span-2">
           <h2>WIND</h2>
           <div className="flex justify-between item">
             <span>Speed</span>
@@ -116,7 +122,7 @@ const Details = () => {
           </div>
         </div>
 
-        <div className="detail-info-card">
+        <div className="detail-info-card flex-1">
           <h2>VISIBILITY</h2>
           <div className="flex justify-between item">
             <span>Visible</span>
@@ -124,7 +130,7 @@ const Details = () => {
           </div>
         </div>
 
-        <div className="detail-info-card">
+        <div className="detail-info-card flex-1">
           <h2>Clouds</h2>
           <div className="flex justify-between item">
             <span>1h</span>
