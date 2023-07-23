@@ -20,7 +20,7 @@ const SearchPage = () => {
   }
   return (
     <div className="search-page w-[100%] h-[100vh] bg-sky-400 flex justify-center align-middle">
-      <div className="city-container w-[50%] my-10 ">
+      <div className="city-container w-[70%] md:w-[50%] my-10 ">
         <Link to={{ pathname: `/details/${name}/${city[0].lat}/${city[0].lon}` }} className="link-wrapper">
           <div className="city-card  flex justify-between  bg-[#2f85c7ef] px-10 py-8 cursor-pointer border  border-1 items-center text-center">
             <figure>
