@@ -32,7 +32,7 @@ const Details = () => {
   };
   return (
     <div className="detail-container bg-sky-500 py-10">
-      <div className='image-container w-[800px]'>
+      <div className='image-container w-[400px] md:w-[800px]'>
         <img src={cloudCover} alt='cloud-cover' className='cloud-image'/>
       </div>
       <IoMdArrowRoundBack onClick={handleClick} className=" text-4xl font-semibold text-white ms-10 border cursor-pointer border-white" />

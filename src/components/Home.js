@@ -5,7 +5,7 @@ import '../styles/Home.css';
 
 function Home() {
   return (
-    <div className="city-container grid grid-cols-2 md:grid-cols-5">
+    <div className="city-container grid grid-cols-1 md:grid-cols-5">
       {citiesData.map((city) => <CityCard key={city.name} city={city} />)}
     </div>
   );
