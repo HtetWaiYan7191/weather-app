@@ -5,8 +5,7 @@ import '../styles/Details.css';
 import { IoMdArrowRoundBack } from 'react-icons/io';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { fetchDetailAPI } from '../redux/detail/detailSlice';
-import cloudImageCover from '../assets/cloudImageCover.png';
-
+import cloudCover from '../assets/cloud-cover.png';
 
 
 const Details = () => {
@@ -33,9 +32,9 @@ const Details = () => {
   };
   return (
     <div className="detail-container bg-sky-500 py-10">
-      {/* <div className='image-container w-[500px]'>
-        <img src={cloudImageCover} alt='cloud-cover' className='cloud-image'/>
-      </div> */}
+      <div className='image-container w-[800px]'>
+        <img src={cloudCover} alt='cloud-cover' className='cloud-image'/>
+      </div>
       <IoMdArrowRoundBack onClick={handleClick} className=" text-4xl font-semibold text-white ms-10 border cursor-pointer border-white" />
       <header className="header-container w-[50%] mx-auto text-center pt-[10rem] pb-[5rem] mb-2 ">
         <h2 className=" text-4xl font-semibold text-white mb-2">{detailInfo.name}</h2>
