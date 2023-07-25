@@ -7,7 +7,6 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { fetchDetailAPI } from '../redux/detail/detailSlice';
 import cloudCover from '../assets/cloud-cover.png';
 
-
 const Details = () => {
   const { lat, lon } = useParams();
   const dispatch = useDispatch();
@@ -32,13 +31,13 @@ const Details = () => {
   };
   return (
     <div className="detail-container bg-sky-500 py-10">
-      <div className='image-container w-[400px] md:w-[800px]'>
-        <img src={cloudCover} alt='cloud-cover' className='cloud-image'/>
+      <div className="image-container w-[400px] md:w-[800px]">
+        <img src={cloudCover} alt="cloud-cover" className="cloud-image" />
       </div>
       <IoMdArrowRoundBack onClick={handleClick} className=" text-4xl font-semibold text-white ms-10 border cursor-pointer border-white" />
       <header className="header-container w-[50%] mx-auto text-center pt-[10rem] pb-[5rem] mb-2 ">
-        <h2 className=" text-4xl font-semibold text-white mb-2">{detailInfo.name}</h2>
-        <h2 className="text-6xl ms-5 text-white font-medium mb-2">
+        <h2 className="text-2xl md:text-4xl font-semibold text-white mb-2">{detailInfo.name}</h2>
+        <h2 className="text-4xl md:text-6xl ms-5 text-white font-medium mb-2">
           {transformCelsius(detailInfo.main.temp)}
           °
         </h2>

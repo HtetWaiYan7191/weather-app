@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate, Link } from 'react-router-dom';
 import { TiWeatherPartlySunny } from 'react-icons/ti';
 import '../styles/Navbar.css';
-  
+
 const Navbar = () => {
   const [inputSearch, setInputSearch] = useState('');
   const navigate = useNavigate();
