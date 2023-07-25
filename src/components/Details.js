@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import '../styles/Details.css';
-import { IoMdArrowRoundBack } from 'react-icons/io';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { fetchDetailAPI } from '../redux/detail/detailSlice';
 import cloudCover from '../assets/cloud-cover.png';
@@ -11,7 +10,6 @@ const Details = () => {
   const { lat, lon } = useParams();
   const dispatch = useDispatch();
   const detailInfo = useSelector((state) => state.detail);
-  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchDetailAPI({ lat, lon }));
@@ -25,16 +23,11 @@ const Details = () => {
     );
   }
   const transformCelsius = (kelvin) => Math.round(kelvin - 273.15);
-  const handleClick = (e) => {
-    e.preventDefault();
-    navigate(-1);
-  };
   return (
     <div className="detail-container bg-sky-500 py-10">
       <div className="image-container w-[400px] md:w-[800px]">
         <img src={cloudCover} alt="cloud-cover" className="cloud-image" />
       </div>
-      <IoMdArrowRoundBack onClick={handleClick} className=" text-4xl font-semibold text-white ms-10 border cursor-pointer border-white" />
       <header className="header-container w-[50%] mx-auto text-center pt-[10rem] pb-[5rem] mb-2 ">
         <h2 className="text-2xl md:text-4xl font-semibold text-white mb-2">{detailInfo.name}</h2>
         <h2 className="text-4xl md:text-6xl ms-5 text-white font-medium mb-2">
@@ -55,7 +48,7 @@ const Details = () => {
         </span>
       </header>
 
-      <div className="flex flex-wrap md:grid md:grid-cols-2 gap-5 md:w-[80%] md:mx-auto w-[100%] px-10 md:px-0 ">
+      <div className="grid md:grid md:grid-cols-2 gap-5 md:w-[80%] md:mx-auto w-[100%] px-10 md:px-0 ">
         <div className="detail-info-card flex-1">
           <h2 className="">COORDINATES</h2>
           <div className="flex justify-between item">
@@ -104,7 +97,7 @@ const Details = () => {
           </div>
         </div>
 
-        <div className="detail-info-card flex-1 col-span-2">
+        <div className="detail-info-card flex-1 md:col-span-2">
           <h2>WIND</h2>
           <div className="flex justify-between item">
             <span>Speed</span>
