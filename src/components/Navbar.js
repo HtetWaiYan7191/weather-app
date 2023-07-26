@@ -1,31 +1,52 @@
 import React, { useState } from 'react';
-import { NavLink, useNavigate, Link } from 'react-router-dom';
+import {
+  NavLink, useNavigate, Link, useLocation,
+} from 'react-router-dom';
 import { TiWeatherPartlySunny } from 'react-icons/ti';
 import '../styles/Navbar.css';
+import { IoMdArrowRoundBack } from 'react-icons/io';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { RxCross1 } from 'react-icons/rx';
 
 const Navbar = () => {
-  const [inputSearch, setInputSearch] = useState('');
+  const location = useLocation();
+  const detailPage = location.pathname.includes('/details/');
+  const searchPage = location.pathname.includes('/search/');
+  const [toggle, setToggle] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleClick = (e) => {
     e.preventDefault();
-    navigate(`/search/${inputSearch}`);
-    setInputSearch('');
+    navigate(-1);
   };
+  console.log(toggle);
   return (
-    <nav className=" flex flex-row-reverse md:flex md:flex-row justify-between px-10 py-5 items-center border-b-2 bg-sky-600">
-      <Link to="/" className=" logo-container">
+    <nav className="flex md:flex md:flex-row justify-between px-2 md:px-10 py-5 items-center border-b-2 bg-sky-600">
+      <Link to="/" className="logo-container">
         <TiWeatherPartlySunny className="text-7xl text-white" />
       </Link>
-      <form onSubmit={handleSubmit}>
-        <input placeholder="Search City" value={inputSearch} onChange={(e) => setInputSearch(e.target.value)} className=" outline-none border-b-2 text-white border-b-white bg-inherit placeholder:text-white mb-3 md:mb-0" />
-        <button type="submit" onClick={handleSubmit} className=" md:hidden block hover:bg-sky-700 text-white bg-sky-800 rounded-md py-1 px-3">Search</button>
-      </form>
+      {detailPage || searchPage ? (
+        <IoMdArrowRoundBack onClick={handleClick} className="text-4xl font-semibold text-white ms-10 border cursor-pointer border-white" />
+      ) : (
+        <div className="menu-container md:hidden block">
+          <AiOutlineMenu className="text-white text-6xl pe-4" onClick={() => { setToggle(!toggle); }} />
+        </div>
+      )}
+
       <ul className="md:flex hidden">
         <li className="me-3"><NavLink to="/">Home</NavLink></li>
         <li className="me-3"><Link to="/" target="blank">City API</Link></li>
         <li className="me-3"><Link to="/" target="blank">Weather API</Link></li>
       </ul>
+      <div className={`flex mobile-list-container absolute slide-in ${toggle ? 'left-0 top-0' : 'left-[-100%] top-0'} bg-sky-300 z-20 `}>
+        <ul className="m-10">
+          <li className="my-5 text-4xl"><NavLink to="/">Home</NavLink></li>
+          <li className="my-5 text-4xl"><Link to="/" target="blank">City API</Link></li>
+          <li className="my-5 text-4xl"><Link to="/" target="blank">Weather API</Link></li>
+        </ul>
+        <RxCross1 className="text-4xl text-white my-7" onClick={() => setToggle(!toggle)} />
+      </div>
+
     </nav>
   );
 };
