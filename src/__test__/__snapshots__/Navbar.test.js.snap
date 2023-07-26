@@ -5,7 +5,7 @@ exports[`Navbar component renders correctly 1`] = `
   className="flex md:flex flex-row md:flex-row justify-between px-2 md:px-10 py-5 items-center border-b-2 bg-sky-600"
 >
   <a
-    className="logo-container"
+    className="logo-container flex"
     href="/"
     onClick={[Function]}
   >
@@ -58,7 +58,7 @@ exports[`Navbar component renders correctly 1`] = `
     </svg>
   </div>
   <ul
-    className="md:flex hidden"
+    className="md:flex  hidden"
   >
     <li
       className="me-3"
