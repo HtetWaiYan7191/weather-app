@@ -1,10 +1,17 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 import { APIKEY } from '../city/citySlice';
 
 export const fetchDetailAPI = createAsyncThunk('detail/fetchDetailAPI', async ({ lat, lon }) => {
-  const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKEY}`);
-  return result.data;
+  try {
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKEY}`);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error('Error fetching detail data');
+  }
 });
 
 const detailSlice = createSlice({

@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const initialState = {
   loading: false,
@@ -9,8 +8,16 @@ const initialState = {
 
 export const APIKEY = 'cdcce535212206307ef6e228498f6953';
 export const fetchSearchCity = createAsyncThunk('city/fetchSearchCity', async (cityName) => {
-  const result = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${APIKEY}`);
-  return result.data;
+  try {
+    const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${APIKEY}`);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error('Error fetching city data');
+  }
 });
 
 const citySlice = createSlice({
