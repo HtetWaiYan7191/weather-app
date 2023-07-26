@@ -19,9 +19,9 @@ const Navbar = () => {
     e.preventDefault();
     navigate(-1);
   };
-  console.log(toggle);
+
   return (
-    <nav className="flex md:flex md:flex-row justify-between px-2 md:px-10 py-5 items-center border-b-2 bg-sky-600">
+    <nav className={`flex md:flex ${detailPage || searchPage ? 'flex-row-reverse' : 'flex-row'} md:flex-row justify-between px-2 md:px-10 py-5 items-center border-b-2 bg-sky-600`}>
       <Link to="/" className="logo-container">
         <TiWeatherPartlySunny className="text-7xl text-white" />
       </Link>
