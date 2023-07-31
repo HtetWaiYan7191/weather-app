@@ -7,7 +7,7 @@ import { fetchDetailAPI } from '../redux/detail/detailSlice';
 import cloudCover from '../assets/cloud-cover.png';
 
 const Details = () => {
-  const { lat, lon } = useParams();
+  const { name, lat, lon } = useParams();
   const dispatch = useDispatch();
   const detailInfo = useSelector((state) => state.detail);
 
@@ -29,7 +29,7 @@ const Details = () => {
         <img src={cloudCover} alt="cloud-cover" className="cloud-image" />
       </div>
       <header className="header-container w-[50%] mx-auto text-center pt-[10rem] pb-[5rem] mb-2 ">
-        <h2 className="text-2xl md:text-4xl font-semibold text-white mb-2">{detailInfo.name}</h2>
+        <h2 className="text-2xl md:text-4xl font-semibold text-white mb-2 capitalize">{name}</h2>
         <h2 className="text-4xl md:text-6xl ms-5 text-white font-medium mb-2">
           {transformCelsius(detailInfo.main.temp)}
           °
