@@ -76,22 +76,22 @@ exports[`Navbar component renders correctly 1`] = `
       className="me-3"
     >
       <a
-        href="/"
-        onClick={[Function]}
-        target="blank"
+        href="https://openweathermap.org/api"
+        rel="noopener noreferrer"
+        target="_blank"
       >
-        City API
+        Weather API
       </a>
     </li>
     <li
       className="me-3"
     >
       <a
-        href="/"
-        onClick={[Function]}
-        target="blank"
+        href="https://openweathermap.org/api/geocoding-api"
+        rel="noopener noreferrer"
+        target="_blank"
       >
-        Weather API
+        City API
       </a>
     </li>
   </ul>
@@ -117,22 +117,22 @@ exports[`Navbar component renders correctly 1`] = `
         className="my-5 text-4xl"
       >
         <a
-          href="/"
-          onClick={[Function]}
-          target="blank"
+          href="https://openweathermap.org/api"
+          rel="noopener noreferrer"
+          target="_blank"
         >
-          City API
+          Weather API
         </a>
       </li>
       <li
         className="my-5 text-4xl"
       >
         <a
-          href="/"
-          onClick={[Function]}
-          target="blank"
+          href="https://openweathermap.org/api/geocoding-api"
+          rel="noopener noreferrer"
+          target="_blank"
         >
-          Weather API
+          City API
         </a>
       </li>
     </ul>

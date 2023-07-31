@@ -26,10 +26,8 @@ exports[`SearchPage component SearchPage component renders correctly 1`] = `
           className="weather-info flex flex-col"
         >
           <li
-            className=" text-black"
-          >
-            City Name
-          </li>
+            className=" text-black capitalize"
+          />
           <li
             className=" text-black"
           >

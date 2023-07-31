@@ -38,7 +38,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -70,7 +70,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -102,7 +102,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -134,7 +134,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -166,7 +166,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -198,7 +198,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -230,7 +230,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -262,7 +262,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -294,7 +294,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -326,7 +326,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -358,7 +358,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -390,7 +390,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -422,7 +422,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -454,7 +454,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -486,7 +486,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -518,7 +518,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -550,7 +550,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -582,7 +582,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -614,7 +614,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
@@ -646,7 +646,7 @@ exports[`Home component Home component renders correctly 1`] = `
         <figure>
           <img
             alt="cloud"
-            className="md:w-[100px]  w-[70px]"
+            className="md:w-[100px]  w-[65px]"
             src="cloudImage.png"
           />
         </figure>
