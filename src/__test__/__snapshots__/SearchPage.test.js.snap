@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchPage component SearchPage component renders correctly 1`] = `
+<div
+  className="search-page w-[100%] h-[100vh] bg-sky-400 flex justify-center align-middle"
+>
+  <div
+    className="city-container w-[70%] md:w-[50%] my-10 "
+  >
+    <a
+      className="link-wrapper"
+      href="/details/undefined/11.1111/22.2222"
+      onClick={[Function]}
+    >
+      <div
+        className="city-card  flex justify-between  bg-[#2f85c7ef] px-10 py-8 cursor-pointer border  border-1 items-center text-center"
+      >
+        <figure>
+          <img
+            alt="cloud"
+            src="cloudImage.png"
+            width="100px"
+          />
+        </figure>
+        <ul
+          className="weather-info flex flex-col"
+        >
+          <li
+            className=" text-black capitalize"
+          />
+          <li
+            className=" text-black"
+          >
+            Lat:
+            11.1111
+          </li>
+          <li
+            className=" text-black"
+          >
+            Lon:
+            22.2222
+          </li>
+        </ul>
+      </div>
+    </a>
+  </div>
+</div>
+`;
