@@ -89,11 +89,19 @@ const Details = () => {
           <h2>Pressure</h2>
           <div className="flex justify-between item">
             <span>Sea Level</span>
-            <span>{detailInfo.main.sea_level}</span>
+            <span>
+              {detailInfo.main.sea_level}
+              {' '}
+&nbsp; hpa
+            </span>
           </div>
           <div className="flex justify-between item">
             <span>Ground Level</span>
-            <span>{detailInfo.main.grnd_level}</span>
+            <span>
+              {detailInfo.main.grnd_level}
+              {' '}
+&nbsp; hpa
+            </span>
           </div>
         </div>
 
@@ -109,7 +117,12 @@ const Details = () => {
           </div>
           <div className="flex justify-between item">
             <span>Gust</span>
-            <span>{detailInfo.wind.gust}</span>
+            <span>
+              {detailInfo.wind.gust}
+              {' '}
+&nbsp; m/s
+              {' '}
+            </span>
           </div>
         </div>
 
