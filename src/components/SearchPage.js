@@ -28,7 +28,7 @@ const SearchPage = () => {
             </figure>
             {city.length > 0 && (
             <ul className="weather-info flex flex-col">
-              <li className=" text-black">{city[0].name}</li>
+              <li className=" text-black">{name}</li>
               <li className=" text-black">
                 Lat:
                 {city[0].lat}
