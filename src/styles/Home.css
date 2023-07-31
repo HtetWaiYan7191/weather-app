@@ -1,4 +1,4 @@
-@media screen and (min-width: 378px) {
+@media screen and (min-width: 375px) {
   .city-container .link-wrapper .city-card {
     padding: 30px 10px;
   }
@@ -9,8 +9,8 @@
   }
 
   .weather-info li {
-    font-family: 'Roboto Slab', serif;
     color: whitesmoke;
+    font-size: 0.9rem;
   }
 }
 
@@ -25,5 +25,9 @@
 
   .city-container .link-wrapper:nth-child(even) {
     background-color: #2f85c7ef;
+  }
+
+  .weather-info li {
+    font-size: 1rem;
   }
 }
