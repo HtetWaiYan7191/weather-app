@@ -65,7 +65,7 @@
 
 ## 🚀 Video Walkthrough <a name="live-video"></a>
 
-- [Live Video Link](https://space-travelers-hub-h0bs.onrender.com)
+- [Live Video Link](https://www.loom.com/share/b01eb6d03947474b9c19e0b332eeda56?sid=402a3898-5678-4199-9376-8a370d4c1281)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
