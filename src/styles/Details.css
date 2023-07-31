@@ -98,8 +98,4 @@
   .image-container {
     top: 0%;
   }
-
-  .cloud-image {
-    backdrop-filter: (5px);
-  }
 }
